@@ -1,4 +1,4 @@
-# Inventor 2040 W C++ Examples <!-- omit in toc -->
+# Inventor 2040 W Micropython Examples <!-- omit in toc -->
 
 - [Function Examples](#function-examples)
   - [Read ADCs](#read-adcs)
@@ -29,86 +29,91 @@
   - [Calibration](#calibration)
 - [Audio Examples](#audio-examples)
   - [Tone Song](#tone-song)
-  - [Motor Song](#motor-song)
 
 ## Function Examples
 
 ### Read ADCs
-[inventor2040w_read_adcs.cpp](inventor2040w_read_adcs.cpp)
+[read_adcs.py](read_adcs.py)
 
 Shows how to initialise and read the 3 ADC headers of Inventor 2040 W.
 
 
 ### Read GPIOs
-[inventor2040w_read_gpios.cpp](inventor2040w_read_gpios.cpp)
+[read_gpios.py](read_gpios.py)
 
 Shows how to initialise and read the 6 GPIO headers of Inventor 2040 W.
 
 
 ### Read Encoders
-[inventor2040w_read_encoders.cpp](inventor2040w_read_encoders.cpp)
+[read_encoders.py](read_encoders.py)
 
 Demonstrates how to read the angles of Inventor 2040 W's two encoders.
 
 
 ### LED Rainbow
-[inventor2040w_led_rainbow.cpp](inventor2040w_led_rainbow.cpp)
+[led_rainbow.py](led_rainbow.py)
 
 Displays a rotating rainbow pattern on Inventor 2040 W's onboard LED bars.
+
+
+### Reset Inventor
+[reset_inventor.py](reset_inventor.py)
+
+A simple program that resets Inventor 2040 W, turning off its LEDs, Motors, Servos, and Audio.
 
 
 ## Motor Examples
 
 ### Single Motor
-[motors/inventor2040w_single_motor.cpp](motors/inventor2040w_single_motor.cpp)
+[motors/single_motor.py](motors/single_motor.py)
 
 Demonstrates how to control a motor on Inventor 2040 W.
 
 
 ### Dual Motors
-[motors/inventor2040w_dual_motors.cpp](motors/inventor2040w_dual_motors.cpp)
+[motors/dual_motors.py](motors/dual_motors.py)
 
 Demonstrates how to control both motors on Inventor 2040 W.
 
 
 ### Motor Wave
-[motors/inventor2040w_motor_waver.cpp](motors/inventor2040w_motor_wave.cpp)
+[motors/motor_wave.py](motors/motor_wave.py)
 
 An example of applying a wave pattern to Inventor 2040 W's motors and LEDs.
 
 
 ### Position Control
-[motors/inventor2040w_position_control.cpp](motors/inventor2040w_position_control.cpp)
+[motors/position_control.py](motors/position_control.py)
 
 An example of how to move a motor smoothly between random positions, with the help of it's attached encoder and PID control.
 
 
 ### Velocity Control
-[motors/inventor2040w_velocity_control.cpp](motors/inventor2040w_velocity_control.cpp)
+[motors/velocity_control.py](motors/velocity_control.py)
 
 An example of how to drive a motor smoothly between random speeds, with the help of it's attached encoder and PID control.
 
 
 ### Position on Velocity Control
-[motors/inventor2040w_position_on_velocity_control.cpp](motors/inventor2040w_position_on_velocity_control.cpp)
+[motors/position_on_velocity_control.py](motors/position_on_velocity_control.py)
 
 An example of how to move a motor smoothly between random positions, with velocity limits, with the help of it's attached encoder and PID control.
 
 
 ### Reactive Encoder
-[motors/inventor2040w_reactive_encoder.cpp](motors/inventor2040w_reactive_encoder.cpp)
+[motors/reactive_encoder.py](motors/reactive_encoder.py)
 
 A demonstration of how a motor with an encoder can be used as a programmable rotary encoder for user input, with force-feedback for arbitrary detents and end stops.
 
 
 ### Position Wave
-[motors/inventor2040w_position_wave.cpp](motors/inventor2040w_position_wave.cpp)
+[motors/position_wave.py](motors/position_wave.py)
 
 A demonstration of driving both of Inventor 2040 W's motor outputs between positions, with the help of their attached encoders and PID control.
 
 
 ### Driving Sequence
-[motors/inventor2040w_driving_sequence.cpp](motors/inventor2040w_driving_sequence.cpp)
+[motors/driving_sequence.py](motors/driving_sequence.py)
 
 A demonstration of driving both of Inventor 2040 W's motor outputs through a sequence of velocities, with the help of their attached encoders and PID control.
 
@@ -116,25 +121,25 @@ A demonstration of driving both of Inventor 2040 W's motor outputs through a seq
 ## Motor Tuning
 
 ### Motor Profiler
-[motors/tuning/inventor2040w_motor_profiler.cpp](motors/tuning/inventor2040w_motor_profiler.cpp)
+[motors/tuning/motor_profiler.py](motors/tuning/motor_profiler.py)
 
 A program that profiles the speed of a motor across its PWM duty cycle range using the attached encoder for feedback.
 
 
 ### Position Tuning
-[motors/tuning/inventor2040w_position_tuning.cpp](motors/tuning/inventor2040w_position_tuning.cpp)
+[motors/tuning/position_tuning.py](motors/tuning/position_tuning.py)
 
 A program to aid in the discovery and tuning of motor PID values for position control. It does this by commanding the motor to move repeatedly between two setpoint angles and plots the measured response.
 
 
 ### Velocity Tuning
-[motors/tuning/inventor2040w_velocity_tuning.cpp](motors/tuning/inventor2040w_velocity_tuning.cpp)
+[motors/tuning/velocity_tuning.py](motors/tuning/velocity_tuning.py)
 
 A program to aid in the discovery and tuning of motor PID values for velocity control. It does this by commanding the motor to drive repeatedly between two setpoint speeds and plots the measured response.
 
 
 ### Position on Velocity Tuning
-[motors/tuning/inventor2040w_position_on_velocity_tuning.cpp](motors/tuning/inventor2040w_position_on_velocity_tuning.cpp)
+[motors/tuning/position_on_velocity_tuning.py](motors/tuning/position_on_velocity_tuning.py)
 
 A program to aid in the discovery and tuning of motor PID values for position on velocity control. It does this by commanding the motor to move repeatedly between two setpoint angles and plots the measured response.
 
@@ -142,31 +147,31 @@ A program to aid in the discovery and tuning of motor PID values for position on
 ## Servo Examples
 
 ### Single Servo
-[servos/inventor2040w_single_servo.cpp](servos/inventor2040w_single_servo.cpp)
+[servos/single_servo.py](servos/single_servo.py)
 
 Demonstrates how to control a single servo on Inventor 2040 W.
 
 
 ### Multiple Servos
-[servos/inventor2040w_multiple_servos.cpp](servos/inventor2040w_multiple_servos.cpp)
+[servos/multiple_servos.py](servos/multiple_servos.py)
 
 Demonstrates how to control all of the servos on Inventor 2040 W.
 
 
 ### Simple Easing
-[servos/inventor2040w_simple_easing.cpp](servos/inventor2040w_simple_easing.cpp)
+[servos/simple_easing.py](servos/simple_easing.py)
 
 An example of how to move a servo smoothly between random positions.
 
 
 ### Servo Wave
-[servos/inventor2040w_servo_wave.cpp](servos/inventor2040w_servo_wave.cpp)
+[servos/servo_wave.py](servos/servo_wave.py)
 
 An example of applying a wave pattern to a group of servos and the LEDs.
 
 
 ### Calibration
-[servos/inventor2040w_calibration.cpp](servos/inventor2040w_calibration.cpp)
+[servos/calibration.py](servos/calibration.py)
 
 Shows how to configure Inventor 2040 W's servos with different common calibrations, as well as a completely custom one.
 
@@ -174,12 +179,11 @@ Shows how to configure Inventor 2040 W's servos with different common calibratio
 ## Audio Examples
 
 ### Tone Song
-[audio/inventor2040w_tone_song.cpp](audio/inventor2040w_tone_song.cpp)
+[audio/tone_song.py](audio/tone_song.py)
 
 This example shows you how you can use Inventor 2040 W's audio output with a speaker to play different notes and string them together into a bleepy tune.
 
-
 ### Motor Song
-[audio/inventor2040w_motor_song.cpp](audio/inventor2040w_motor_song.cpp)
+[audio/motor_song.py](audio/motor_song.py)
 
 A fun example of how to change a motor's frequency to have it play a song.
